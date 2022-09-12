@@ -1,0 +1,70 @@
+// From Bootstrap v4.5.3
+// Edits:
+// -  Removes the top, left, and right borders.
+// -  The default hover colors are darkened if the color doesn't match the
+//    $primary, $secondary, or $tertiary colors.
+@mixin button-outline-variant(
+  $color,
+  $color-hover: color-yiq($color),
+  $active-background: darken($color, 7.5%),
+  $active-border: darken($color, 7.5%)
+) {
+  color: $color;
+  border-color: $color;
+
+  // Override styles
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  font-weight: $font-weight-bold;
+  padding-left: 0;
+  padding-right: 0;
+
+  // Force defaults
+  @if $color == $primary {
+    $active-background: $secondary;
+    $active-border: $secondary;
+  } @else if $color == $secondary {
+    $active-background: $primary;
+    $active-border: $primary;
+  } @else if $color == $tertiary {
+    $active-background: $secondary;
+    $active-border: $secondary;
+  }
+
+  @include hover() {
+    color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        @include box-shadow(
+          $btn-active-box-shadow,
+          0 0 0 $btn-focus-width rgba($color, 0.5)
+        );
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+      }
+    }
+  }
+}

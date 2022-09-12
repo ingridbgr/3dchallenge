@@ -10,10 +10,11 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "bootstrap": "^5.2.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "sass": "^1.54.9",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -21,7 +22,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass-build": " npm run build-css && sass src/scss/style.scss:src/style.css --watch --no-source-map",
+    "scss:main": "node-sass src/scss/style.scss src/style.css --output-style compressed --source-map true",
+    "scss:editor": "node-sass src/scss/editor.scss src/editor.css --output-style compressed",
+    "compile:css": "npm run scss:main && npm run scss:editor",
+    "watch:scss": "npm run compile:css",
+    "prod:scss:main": "node-sass src/scss/style.scss src/style-dist.css --output-style compressed",
+    "prod:compile:css": "npm run prod:scss:main && npm run scss:editor",
+    "develop": "npm-watch",
+    "build-css": "npm run prod:compile:css"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.54.9"
   }
 }

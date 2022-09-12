@@ -1,0 +1,74 @@
+// Bootstrap Defaults
+$white: #fff;
+$white-200: #f8f8f8;
+$white-300: #efefef;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #f4f4f4;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$light-blue: #4bb8e7;
+$medium-blue: #039dde;
+$dark-blue: #001d35;
+$turquoise: #26a8bd;
+$light-gray: #dadada;
+$dark-gray: #7a7c7c;
+
+$blue-dark: #19293c;
+$light-blue: #018ac6;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$purple: #805791;
+
+$primary: $light-blue;
+$secondary: $medium-blue;
+$tertiary: $dark-blue;
+
+$success: $green;
+$info: $turquoise;
+$warning: $yellow;
+$danger: $red;
+$light: $light-gray;
+$dark: $dark-gray;
+
+$colors: ();
+$colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-400": $gray-400,
+    "gray-dark": $gray-800,
+  ),
+  $colors
+);
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+  ),
+  $theme-colors
+);

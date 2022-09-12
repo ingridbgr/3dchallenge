@@ -1,0 +1,23 @@
+.info-panel {
+	background-color: $secondary;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.button-area {
+		display: flex;
+		.btn-primary {
+			display: inline-flex;
+			padding: 1rem 3rem;
+		}
+	}
+	.patient-info {
+		display: inline-flex;
+		color: $white;
+		.patient-data {
+			margin: 0 2rem;
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+}

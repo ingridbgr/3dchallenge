@@ -1,0 +1,23 @@
+.btn {
+	border: transparent;
+}
+
+.btn-primary {
+	background-color: $primary;
+	color: $white;
+	border: transparent;
+	padding: 1rem;
+	&:hover {
+		background-color: #2e4665;
+	}
+}
+
+.btn-secondary {
+	background-color: $white;
+	color: $black;
+	margin: 0 1rem;
+	&:hover {
+		color: $tertiary;
+		border-bottom: 1px solid $tertiary;
+	}
+}

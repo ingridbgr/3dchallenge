@@ -1,0 +1,66 @@
+.navbar-container {
+	color: $light-blue;
+	display: flex;
+	justify-content: space-between;
+	.navbar-buttons {
+		margin: 1rem;
+		display: flex;
+		.navbar-nav {
+			align-items: center;
+			color: $black;
+			&:hover {
+				color: $secondary;
+			}
+		}
+		.logo-image {
+			max-width: 16rem;
+		}
+		.dashboard-title {
+			color: $tertiary;
+		}
+		.dropdown-toggle::after {
+			display: none;
+		}
+	}
+	.user-info {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		&__name {
+			margin: 1.2rem 1rem 1rem 0;
+			color: $turquoise;
+		}
+		&__photo {
+			&-user {
+				max-width: 4rem;
+				border-radius: 50%;
+			}
+		}
+		.badge-info {
+			background-color: $turquoise;
+			color: $white;
+			position: relative;
+			top: 30px;
+			right: 34px;
+			border-radius: 50%;
+			font-size: 14px;
+		}
+		.dropdown-language {
+			.dropdown-toggle::after {
+				display: none;
+			}
+			.dropdown-toggle {
+				display: flex;
+				background: none;
+				color: $black;
+				border: none;
+				&::after {
+					display: none;
+				}
+			}
+			.dropdown-menu-language {
+				max-width: min-content;
+			}
+		}
+	}
+}
