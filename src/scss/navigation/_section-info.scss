@@ -8,8 +8,11 @@
 		display: flex;
 		.btn-primary {
 			display: inline-flex;
-			padding: 1rem 3rem;
+			padding: 1rem 2rem;
 		}
+	}
+	.dropdown-toggle {
+		display: flex;
 	}
 	.patient-info {
 		display: inline-flex;

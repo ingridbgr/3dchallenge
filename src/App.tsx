@@ -1,5 +1,6 @@
 import NavbarMenu from './components/NavbarMenu';
 import SectionInfo from './components/SectionInfo';
+import SidebarNav from './components/SidebarNav';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <NavbarMenu/>
       <SectionInfo/>
+      <SidebarNav/>
     </div>
   );
 }

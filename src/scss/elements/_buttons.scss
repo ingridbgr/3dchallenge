@@ -5,6 +5,7 @@
 .btn-primary {
 	background-color: $primary;
 	color: $white;
+	display: flex;
 	border: transparent;
 	padding: 1rem;
 	&:hover {
@@ -19,5 +20,16 @@
 	&:hover {
 		color: $tertiary;
 		border-bottom: 1px solid $tertiary;
+	}
+}
+
+.btn-sidebar {
+	background-color: transparent;
+	padding: 1rem;
+	color: $white;
+	display: inline-flex;
+	align-items: center;
+	&:hover {
+		background-color: #2e4665;
 	}
 }

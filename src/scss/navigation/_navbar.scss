@@ -18,8 +18,11 @@
 		.dashboard-title {
 			color: $tertiary;
 		}
-		.dropdown-toggle::after {
-			display: none;
+		.dropdown-toggle {
+			display: flex;
+			&::after {
+				display: none;
+			}
 		}
 	}
 	.user-info {
