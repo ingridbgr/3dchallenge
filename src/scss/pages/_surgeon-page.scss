@@ -1,0 +1,59 @@
+.surgeon-page {
+	width: 100%;
+	min-height: 100vh;
+	background: #f5f5f5;
+	margin: 0;
+	padding-top: 2rem;
+	position: relative;
+	transition: 0.25s ease-in-out;
+	&.collapsed {
+		transition: 0.25s ease-in-out;
+		padding-left: 12rem;
+		padding-top: 2rem;
+		margin: 0;
+	}
+	.page-container {
+		position: relative;
+		flex-grow: 1;
+		margin-left: 5rem;
+		flex-shrink: 1;
+		flex-basis: auto;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.page-header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0 2rem;
+		color: $secondary;
+	}
+	hr {
+		margin-top: 0;
+		color: $gray-500;
+	}
+	.main-content {
+		max-width: 33rem;
+		.file-uploader {
+			display: flex;
+			align-items: center;
+			margin: 0 2rem;
+			cursor: pointer;
+			justify-content: space-between;
+
+			.input-uploads {
+				width: 17rem;
+				margin: 0.5rem 2rem;
+				justify-content: center;
+			}
+			.base-input {
+				display: none;
+			}
+		}
+		.button-area {
+			display: flex;
+			margin: 3rem 2rem;
+			justify-content: space-evenly;
+		}
+	}
+}

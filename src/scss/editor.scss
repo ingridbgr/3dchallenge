@@ -2,13 +2,16 @@
 @import "mixins/mixins";
 
 .App {
-  text-align: center;
-  color: #4bb8e7;
-  font-family: $font-family-base;
+	text-align: center;
+	font-family: $font-family-base;
 }
 
 body {
-  color: $tertiary;
-  font-family: $font-family-base;
-  font-size: 16px;
+	color: $tertiary;
+	font-family: $font-family-base;
+	font-size: 16px;
+}
+
+.c-flex-container {
+	transition: 0.25s ease-in-out;
 }

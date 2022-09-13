@@ -16,8 +16,10 @@ $black: #000;
 $light-blue: #4bb8e7;
 $medium-blue: #039dde;
 $dark-blue: #001d35;
+$hover-blue: #2e4665;
 $turquoise: #26a8bd;
 $light-gray: #dadada;
+$medium-gray: #b9c1ca;
 $dark-gray: #7a7c7c;
 
 $blue-dark: #19293c;
@@ -45,30 +47,30 @@ $dark: $dark-gray;
 
 $colors: ();
 $colors: map-merge(
-  (
-    "primary": $primary,
-    "secondary": $secondary,
-    "tertiary": $tertiary,
-    "white": $white,
-    "gray": $gray-600,
-    "gray-400": $gray-400,
-    "gray-dark": $gray-800,
-  ),
-  $colors
+	(
+		"primary": $primary,
+		"secondary": $secondary,
+		"tertiary": $tertiary,
+		"white": $white,
+		"gray": $gray-600,
+		"gray-400": $gray-400,
+		"gray-dark": $gray-800,
+	),
+	$colors
 );
 
 $theme-colors: ();
 $theme-colors: map-merge(
-  (
-    "primary": $primary,
-    "secondary": $secondary,
-    "tertiary": $tertiary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark,
-  ),
-  $theme-colors
+	(
+		"primary": $primary,
+		"secondary": $secondary,
+		"tertiary": $tertiary,
+		"success": $success,
+		"info": $info,
+		"warning": $warning,
+		"danger": $danger,
+		"light": $light,
+		"dark": $dark,
+	),
+	$theme-colors
 );
