@@ -2822,7 +2822,7 @@ textarea.form-control-lg {
 }
 .sidebar .dropdown-container {
   display: none;
-  background-color: #b9c1ca;
+  background-color: #2e4665;
   flex-direction: column;
   margin: 0.6rem;
 }
@@ -2832,6 +2832,10 @@ textarea.form-control-lg {
 .sidebar .dropdown-container .tasks {
   margin: 0.5rem;
   padding: 0.5rem;
+  color: #fff;
+}
+.sidebar .dropdown-container .tasks:hover {
+  background-color: #039dde;
 }
 
 /***********************************************************************

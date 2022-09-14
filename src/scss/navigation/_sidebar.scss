@@ -88,15 +88,20 @@
 	}
 	.dropdown-container {
 		display: none;
-		background-color: $medium-gray;
+		background-color: $hover-blue;
 		flex-direction: column;
 		margin: 0.6rem;
+
 		a {
 			text-decoration: none;
 		}
 		.tasks {
 			margin: 0.5rem;
 			padding: 0.5rem;
+			color: $white;
+			&:hover {
+				background-color: $secondary;
+			}
 		}
 	}
 }
