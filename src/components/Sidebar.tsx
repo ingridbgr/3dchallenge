@@ -4,22 +4,6 @@ interface ValueProps {
 }
 
 const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
-	let dropdown: any = document.getElementsByClassName("dropdown-btn");
-	let i;
-
-	for (i = 0; i < dropdown.length; i++) {
-		dropdown[i].addEventListener("click", function (this: any) {
-			this.classList.toggle("active");
-			let dropdownContent = this.nextElementSibling;
-			if (dropdownContent.style.display === "flex" || !isOpen) {
-				dropdownContent.style.display = "none";
-			} else if (dropdownContent.style.display === "flex") {
-				dropdownContent.style.display = "none";	
-			} else {
-				dropdownContent.style.display = "flex";
-			}
-		});
-	}
 	const handleClick = () => (isOpen ? setIsOpen(false) : setIsOpen(true));
 	return (
 		<div className={!isOpen ? "nav sidebar" : "nav sidebar expanded"}>
@@ -60,7 +44,7 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 				<li className="nav-list-item">
 					<button className="btn btn-sidebar dropdown-btn">
 						<span className="material-symbols-outlined">task</span>
-						<span className="badge badge-pill badge-info">4</span>
+						<span className="badge badge-pill badge-info">2</span>
 						<span className="sidebar-title">
 							Current Tasks
 							<span className="material-symbols-outlined">expand_more</span>
@@ -73,18 +57,12 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 						<a className="  tasks" href="#">
 							Task 2
 						</a>
-						<a className="  tasks" href="#">
-							Task 3
-						</a>
-						<a className="  tasks" href="#">
-							Task 4
-						</a>
 					</div>
 				</li>
 				<li className="nav-list-item">
 					<button className="btn btn-sidebar dropdown-btn">
 						<span className="material-symbols-outlined">calendar_month</span>
-						<span className="badge badge-pill badge-info">3</span>
+						<span className="badge badge-pill badge-info">2</span>
 						<span className="sidebar-title">
 							Upcoming Tasks
 							<span className="material-symbols-outlined">expand_more</span>
@@ -96,9 +74,6 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 						</a>
 						<a className="  tasks" href="#">
 							Task 2
-						</a>
-						<a className="  tasks" href="#">
-							Task 3
 						</a>
 					</div>
 				</li>
