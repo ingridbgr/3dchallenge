@@ -10,10 +10,10 @@ const SectionInfo = () => {
 			<div className="button-area">
 				<button className="btn-primary">
 					<span className="material-symbols-outlined">arrow_back_ios</span>
-					return
+					Return
 				</button>
 				<button className="btn-primary">
-					<span className="material-symbols-outlined"> visibility</span>preview
+					<span className="material-symbols-outlined"> visibility</span>Preview
 				</button>
 			</div>
 			<div className="patient-info">

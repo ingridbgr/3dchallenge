@@ -2,7 +2,6 @@ import { useState } from "react";
 import NavbarMenu from "./components/NavbarMenu";
 import SectionInfo from "./components/SectionInfo";
 import Sidebar from "./components/Sidebar";
-import SidebarNav from "./components/SidebarNav";
 import SurgeonPage from "./pages/SurgeonPage";
 
 function App() {

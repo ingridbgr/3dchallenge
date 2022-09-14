@@ -3,7 +3,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 interface ValueProps {
-	isOpen: boolean;
+	isOpen: any;
 }
 const SurgeonPage = ({ isOpen }: ValueProps) => {
 	const renderTooltip = (props: any) => (

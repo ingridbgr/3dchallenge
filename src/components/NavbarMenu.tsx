@@ -18,11 +18,11 @@ const NavbarMenu = () => {
 				<Navbar expand="lg">
 					<Container fluid>
 						<Navbar.Brand href="#home">
-							<img className="logo-image" src={logo}></img>
+							<img alt="logo" className="logo-image" src={logo}></img>
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls="navbar-menu" />
 						<Navbar.Collapse id="navbar-menu">
-							<Nav>
+							<Nav activeKey="/home">
 								<NavDropdown
 									id="nav-dropdown-menu"
 									title={[
@@ -31,7 +31,8 @@ const NavbarMenu = () => {
 											expand_more
 										</span>,
 									]}
-									className="dashboard-title btn-secondary">
+									className="dashboard-title btn-secondary"
+								>
 									<NavDropdown.Item href="#action/3.2">
 										Another action
 									</NavDropdown.Item>
@@ -85,7 +86,11 @@ const NavbarMenu = () => {
 				)}
 				<div className="user-info__name">{userInfo.user}</div>
 				<div className="user-info__photo">
-					<img className="user-info__photo-user" src={doctor}></img>
+					<img
+						alt="user-profile"
+						className="user-info__photo-user"
+						src={doctor}
+					></img>
 				</div>
 				<span className="badge badge-pill badge-info">5</span>
 

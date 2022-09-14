@@ -2593,7 +2593,7 @@ textarea.form-control-lg {
 }
 
 .btn-secondary {
-  background-color: #fff;
+  background-color: transparent;
   color: #000;
   margin: 0 1rem;
 }
@@ -2752,21 +2752,33 @@ textarea.form-control-lg {
   color: #fff;
   transition: 0.25s ease-in-out;
 }
+.sidebar .sidebar-heading {
+  transition: 0.25s ease-in-out;
+  padding: 1rem 0.6rem;
+}
 .sidebar .sidebar-heading .material-symbols-outlined {
   font-size: 1.5rem;
   padding: 0;
 }
 .sidebar.expanded {
-  width: 17.3rem;
+  width: 17.7rem;
   transition: 0.25s ease-in-out;
 }
+.sidebar.expanded .sidebar-heading {
+  padding: 1rem 1.6rem;
+}
+.sidebar.expanded .sidebar-heading .material-symbols-outlined {
+  margin-right: 0.5rem;
+}
 .sidebar.expanded .nav-list {
-  width: 17.3rem;
+  transition: 0.25s ease-in-out;
+  width: 17.7rem;
   justify-content: left;
 }
 .sidebar.expanded .nav-list .sidebar-title {
   display: flex;
   align-items: center;
+  transition: 0.25s ease-in-out;
 }
 .sidebar .material-symbols-outlined {
   font-size: 2rem;
@@ -2786,13 +2798,13 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   padding: 0;
+  transition: 0.25s ease-in-out;
   width: 5rem;
 }
 .sidebar .nav-list-item {
   overflow: hidden;
   justify-content: space-between;
   width: 100%;
-  display: flex;
   align-items: center;
   padding: 0.9rem 0;
   width: 100%;
@@ -2801,16 +2813,25 @@ textarea.form-control-lg {
 }
 .sidebar .nav-list .sidebar-title {
   display: none;
+  transition: 0.25s ease-in-out;
+}
+.sidebar .sidebar-container {
+  position: relative;
+  flex-direction: column;
+  margin: 2rem;
 }
 .sidebar .dropdown-container {
   display: none;
-  background-color: #262626;
-  padding-left: 8px;
+  background-color: #b9c1ca;
+  flex-direction: column;
+  margin: 0.6rem;
 }
-.sidebar .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+.sidebar .dropdown-container a {
+  text-decoration: none;
+}
+.sidebar .dropdown-container .tasks {
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 /***********************************************************************
