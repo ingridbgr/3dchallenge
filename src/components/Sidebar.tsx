@@ -1,33 +1,26 @@
 interface ValueProps {
-	isOpen: any;
+	isOpen: boolean;
 	setIsOpen: (value: any) => void;
 }
 
 const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 	let dropdown: any = document.getElementsByClassName("dropdown-btn");
-	let dropdownContainer: any = document.getElementsByClassName("dropdown-container");
 	let i;
 
 	for (i = 0; i < dropdown.length; i++) {
 		dropdown[i].addEventListener("click", function (this: any) {
 			this.classList.toggle("active");
 			let dropdownContent = this.nextElementSibling;
-			if (dropdownContent.style.display === "flex") {
+			if (dropdownContent.style.display === "flex" || !isOpen) {
 				dropdownContent.style.display = "none";
+			}else if(dropdownContent.style.display === "flex" ){
+
 			} else {
 				dropdownContent.style.display = "flex";
 			}
 		});
 	}
-	const handleClick = () => {
-		if (isOpen) {
-			dropdownContainer.style.display = "none";
-			setIsOpen(false);
-			
-		}else {
-			setIsOpen(true);
-		}
-	};
+	const handleClick = () => (isOpen ? setIsOpen(false) : setIsOpen(true));
 	return (
 		<div className={!isOpen ? "nav sidebar" : "nav sidebar expanded"}>
 			<ul className="nav-list">
