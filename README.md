@@ -29,3 +29,13 @@ this project uses:
     <li> Bootstrap
     <li> SASS 
 </ul>
+
+## Figma Design
+
+click <a href="https://www.figma.com/file/VtPKt1Hi6jj6jYYNhs8x5k/3D-side?node-id=0%3A1">here<a> to see the design files
+
+## Deployed version
+
+You can access the deployed version in this link
+
+https://3dchallenge.vercel.app/
