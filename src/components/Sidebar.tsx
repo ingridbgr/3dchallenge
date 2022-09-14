@@ -14,7 +14,6 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 			let dropdownContent = this.nextElementSibling;
 			if (dropdownContent.style.display === "flex") {
 				dropdownContent.style.display = "none";
-			} else if (dropdownContent.style.display === "flex") {
 			} else {
 				dropdownContent.style.display = "flex";
 			}
@@ -22,10 +21,11 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 	}
 	const handleClick = () => {
 		if (isOpen) {
-			setIsOpen(false);
 			dropdownContainer.style.display = "none";
+			setIsOpen(false);
+			
 		}else {
-		setIsOpen(true);
+			setIsOpen(true);
 		}
 	};
 	return (
