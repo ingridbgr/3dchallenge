@@ -10,7 +10,8 @@
 	flex-shrink: 0;
 	flex-direction: column;
 	width: 5rem;
-	height: 100%;
+	height: calc(100vh - 10.6rem);
+	justify-content: space-between;
 	position: absolute;
 	z-index: 99;
 	background: $tertiary;
@@ -34,15 +35,15 @@
 				margin-right: 0.5rem;
 			}
 		}
+		.sidebar-title {
+			display: flex;
+			align-items: center;
+			transition: 0.25s ease-in-out;
+		}
 		.nav-list {
 			transition: 0.25s ease-in-out;
 			width: 17.7rem;
 			justify-content: left;
-			.sidebar-title {
-				display: flex;
-				align-items: center;
-				transition: 0.25s ease-in-out;
-			}
 		}
 	}
 	.material-symbols-outlined {
@@ -58,6 +59,24 @@
 	}
 	.btn-sidebar {
 		width: 100%;
+	}
+	.sidebar-title {
+		display: none;
+		transition: 0.25s ease-in-out;
+	}
+	.chat-btn {
+		color: $primary;
+		display: flex;
+		align-items: center;
+	}
+	input {
+		display: none;
+
+		&:checked .dropdown-link {
+			top: calc(100% + 25px);
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 	.nav-list {
 		display: flex;
@@ -75,10 +94,6 @@
 			width: 100%;
 			white-space: nowrap;
 			line-height: 1rem;
-		}
-		.sidebar-title {
-			display: none;
-			transition: 0.25s ease-in-out;
 		}
 	}
 	.sidebar-container {

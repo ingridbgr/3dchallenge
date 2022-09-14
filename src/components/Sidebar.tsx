@@ -13,8 +13,8 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 			let dropdownContent = this.nextElementSibling;
 			if (dropdownContent.style.display === "flex" || !isOpen) {
 				dropdownContent.style.display = "none";
-			}else if(dropdownContent.style.display === "flex" ){
-
+			} else if (dropdownContent.style.display === "flex") {
+				dropdownContent.style.display = "none";	
 			} else {
 				dropdownContent.style.display = "flex";
 			}
@@ -51,8 +51,8 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 							<span className="material-symbols-outlined">expand_more</span>
 						</span>
 					</button>
-					<div className="dropdown-container">
-						<a className="  tasks" href="#">
+					<div className="dropdown-container" aria-labelledby="dropdownMenuLink">
+						<a className="dropdown-link tasks" href="#">
 							Task 1
 						</a>
 					</div>
@@ -103,6 +103,15 @@ const Sidebar = ({ isOpen, setIsOpen }: ValueProps) => {
 					</div>
 				</li>
 			</ul>
+			<li className="nav-list-item">
+			<button className="btn chat-btn btn-sidebar">
+				<span className="material-symbols-outlined">chat</span>
+				<span className="badge badge-pill badge-info">4</span>
+				<span className="sidebar-title">
+					Chat
+				</span>
+			</button>
+			</li>
 		</div>
 	);
 };

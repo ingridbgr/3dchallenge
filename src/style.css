@@ -2574,6 +2574,7 @@ textarea.form-control-lg {
 ***********************************************************************/
 .btn {
   border: transparent;
+  background-color: transparent;
 }
 
 .btn-primary {
@@ -2744,7 +2745,8 @@ textarea.form-control-lg {
   flex-shrink: 0;
   flex-direction: column;
   width: 5rem;
-  height: 100%;
+  height: calc(100vh - 10.6rem);
+  justify-content: space-between;
   position: absolute;
   z-index: 99;
   background: #001d35;
@@ -2770,15 +2772,15 @@ textarea.form-control-lg {
 .sidebar.expanded .sidebar-heading .material-symbols-outlined {
   margin-right: 0.5rem;
 }
+.sidebar.expanded .sidebar-title {
+  display: flex;
+  align-items: center;
+  transition: 0.25s ease-in-out;
+}
 .sidebar.expanded .nav-list {
   transition: 0.25s ease-in-out;
   width: 17.7rem;
   justify-content: left;
-}
-.sidebar.expanded .nav-list .sidebar-title {
-  display: flex;
-  align-items: center;
-  transition: 0.25s ease-in-out;
 }
 .sidebar .material-symbols-outlined {
   font-size: 2rem;
@@ -2793,6 +2795,23 @@ textarea.form-control-lg {
 }
 .sidebar .btn-sidebar {
   width: 100%;
+}
+.sidebar .sidebar-title {
+  display: none;
+  transition: 0.25s ease-in-out;
+}
+.sidebar .chat-btn {
+  color: #018ac6;
+  display: flex;
+  align-items: center;
+}
+.sidebar input {
+  display: none;
+}
+.sidebar input:checked .dropdown-link {
+  top: calc(100% + 25px);
+  visibility: visible;
+  opacity: 1;
 }
 .sidebar .nav-list {
   display: flex;
@@ -2810,10 +2829,6 @@ textarea.form-control-lg {
   width: 100%;
   white-space: nowrap;
   line-height: 1rem;
-}
-.sidebar .nav-list .sidebar-title {
-  display: none;
-  transition: 0.25s ease-in-out;
 }
 .sidebar .sidebar-container {
   position: relative;
@@ -2843,7 +2858,7 @@ Main Styles and Page Styles
 ***********************************************************************/
 .surgeon-page {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 10.6rem);
   background: #f5f5f5;
   margin: 0;
   padding-top: 2rem;
